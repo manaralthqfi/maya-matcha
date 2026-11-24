@@ -97,8 +97,16 @@ The form uses HTML5 validation plus JavaScript:
 - Email addresses must use a valid email format.
 - Telephone numbers must contain 10 digits.
 - The booking date cannot be earlier than the current date.
-- Required fields are checked before the confirmation message appears.
-- A successful submission displays a personalized confirmation message.
+- The full name must contain at least three characters.
+- The order type and time must be selected.
+- The agreement checkbox must be selected.
+- Each invalid field displays a specific message directly below that field.
+- Invalid fields receive a red border and red validation styling.
+- Field errors are cleared automatically when the user edits or changes the field.
+- A general alert appears below the form: “Please correct the highlighted fields.”
+- A successful submission displays a personalized confirmation message without clearing the submitted values.
+- The booking validation logic is implemented in `js/booking-validation.js`.
+- The booking page loads this script separately so validation updates can be published without affecting the menu cart script.
 
 ### Responsive Navigation
 JavaScript opens and closes the navigation menu on small screens and updates the menu button's `aria-expanded` accessibility attribute.
