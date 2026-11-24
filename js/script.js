@@ -64,6 +64,30 @@ if (bookingForm) {
     dateInput.min = localToday;
   }
 
+  const clearFieldError = element => {
+    element.classList.remove("invalid");
+    const errorId = `${element.id}-error`;
+    const errorElement = document.querySelector(`#${errorId}`);
+    if (errorElement) errorElement.textContent = "";
+  };
+
+  ["name", "email", "phone", "orderType", "date", "time"].forEach(id => {
+    const element = document.querySelector(`#${id}`);
+    if (element) {
+      element.addEventListener("input", () => clearFieldError(element));
+      element.addEventListener("change", () => clearFieldError(element));
+    }
+  });
+
+  const terms = document.querySelector("#terms");
+  if (terms) {
+    terms.addEventListener("change", () => {
+      terms.closest("label").classList.remove("invalid");
+      const termsError = document.querySelector("#terms-error");
+      if (termsError) termsError.textContent = "";
+    });
+  }
+
   bookingForm.addEventListener("submit", event => {
     event.preventDefault();
     const message = document.querySelector("#form-error");
@@ -152,6 +176,5 @@ if (bookingForm) {
     const name = document.querySelector("#name").value.trim();
     message.textContent = `Thank you, ${name}! Your request has been confirmed. We will contact you shortly.`;
     message.className = "form-message success";
-    bookingForm.reset();
   });
 }
