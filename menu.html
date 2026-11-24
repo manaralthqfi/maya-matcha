@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maya Matcha | Menu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">m</span><span>maya<sup>+</sup></span></a>
+    <nav aria-label="Main navigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">☰</button>
+      <ul id="main-nav" class="nav-list">
+        <li><a href="index.html">Home</a></li><li><a href="about.html">Our Story</a></li>
+        <li><a class="active" href="menu.html">Menu</a></li><li><a href="booking.html">Booking & Shop</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="page-hero compact">
+      <p class="eyebrow">DRINKS & POWDERS</p>
+      <h1>Choose your <em>green energy.</em></h1>
+    </section>
+
+    <section class="menu-layout">
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="images/drinks.png" alt="A colorful collection of matcha drinks">
+          <div><p class="tag">MOST POPULAR</p><h2>Matcha Latte</h2><p>Matcha, milk, and a light foam</p><strong>$5.50</strong></div>
+          <button class="add-button" type="button" data-name="Matcha Latte" data-price="5.50" data-id="latte">Add to Cart</button>
+        </article>
+        <article class="product-card">
+          <img src="images/ceremonial.png" alt="Ceremonial matcha powder">
+          <div><p class="tag">AT HOME</p><h2>Ceremonial Powder</h2><p>30 g of premium matcha</p><strong>$18.50</strong></div>
+          <button class="add-button" type="button" data-name="Ceremonial Powder" data-price="18.50" data-id="powder">Add to Cart</button>
+        </article>
+        <article class="product-card">
+          <img src="images/hero.png" alt="Refreshing iced matcha drinks">
+          <div><p class="tag">REFRESHING</p><h2>Iced Strawberry Matcha</h2><p>Fresh strawberry and iced matcha</p><strong>$6.25</strong></div>
+          <button class="add-button" type="button" data-name="Iced Strawberry Matcha" data-price="6.25" data-id="strawberry">Add to Cart</button>
+        </article>
+      </div>
+
+      <aside class="cart" aria-live="polite">
+        <p class="eyebrow">YOUR CART</p><h2>My Cart</h2>
+        <ul id="cart-items"><li>Cart is empty</li></ul>
+        <div class="cart-total"><span>Total</span><strong id="cart-total">$0.00</strong></div>
+        <a class="button full" href="booking.html">Continue to Booking & Shop</a>
+      </aside>
+    </section>
+
+    <section class="nutrition">
+      <h2>Menu & Prices</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Item</th><th>Type</th><th>Size</th><th>Price</th></tr></thead>
+          <tbody>
+            <tr><td>Matcha Latte</td><td>Hot / Iced</td><td>12 oz</td><td>$5.50</td></tr>
+            <tr><td>Iced Strawberry Matcha</td><td>Iced</td><td>16 oz</td><td>$6.25</td></tr>
+            <tr><td>Ceremonial Powder</td><td>Powder for home</td><td>30 g</td><td>$18.50</td></tr>
+            <tr><td>Maya Tasting Experience</td><td>Tasting session</td><td>2 hours</td><td>$12.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer><p>© 2026 Maya Matcha</p><p>We make every moment feel a little greener.</p></footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maya Matcha | Booking & Shop</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">m</span><span>maya<sup>+</sup></span></a>
+    <nav aria-label="Main navigation">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">☰</button>
+      <ul id="main-nav" class="nav-list">
+        <li><a href="index.html">Home</a></li><li><a href="about.html">Our Story</a></li>
+        <li><a href="menu.html">Menu</a></li><li><a class="active" href="booking.html">Booking & Shop</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="page-hero compact">
+      <p class="eyebrow">RESERVE & SHOP</p>
+      <h1>Book your <em>green moment.</em></h1>
+    </section>
+    <section class="booking-layout">
+      <form id="booking-form" novalidate>
+        <h2>Order & Booking Details</h2>
+        <div class="form-grid">
+          <label>Full Name<input id="name" name="name" type="text" minlength="3" required placeholder="Example: Sarah Ahmed"></label>
+          <label>Email Address<input id="email" name="email" type="email" required placeholder="name@example.com"></label>
+          <label>Phone Number<input id="phone" name="phone" type="tel" pattern="[0-9]{10}" required placeholder="1234567890"></label>
+          <label>Order Type
+            <select id="orderType" name="orderType" required>
+              <option value="">Choose...</option><option value="drink">Drink</option>
+              <option value="powder">Buy Matcha Powder</option><option value="experience">Tasting Experience</option>
+            </select>
+          </label>
+          <label>Date<input id="date" name="date" type="date" required></label>
+          <label>Time
+            <select id="time" name="time" required><option value="">Choose a time</option><option>10:00 AM</option><option>12:30 PM</option><option>4:00 PM</option><option>7:30 PM</option></select>
+          </label>
+        </div>
+        <fieldset>
+          <legend>Pickup Method</legend>
+          <label class="radio"><input type="radio" name="delivery" value="In store" checked> In store</label>
+          <label class="radio"><input type="radio" name="delivery" value="Quick pickup"> Quick pickup</label>
+          <label class="radio"><input type="radio" name="delivery" value="Delivery"> Delivery</label>
+        </fieldset>
+        <label>Notes<textarea name="notes" rows="4" placeholder="Plant milk, sweetness level, or a special request..."></textarea></label>
+        <label class="checkbox"><input type="checkbox" id="terms" required> I agree to the order confirmation and pickup policy.</label>
+        <p id="form-error" class="form-message" role="alert"></p>
+        <button class="button" type="submit">Confirm Order & Booking</button>
+      </form>
+      <aside class="contact-card">
+        <p class="eyebrow">FIND US</p><h2>We are happy to welcome you.</h2>
+        <address><strong>Downtown Branch</strong><br>Green Avenue, Central District<br><br><a href="tel:+966500000000">+966 50 000 0000</a><br><a href="mailto:hello@mayamatcha.com">hello@mayamatcha.com</a></address>
+        <div class="hours"><span>Mon–Sat</span><b>10 AM – 10 PM</b><span>Sunday</span><b>2 PM – 10 PM</b></div>
+      </aside>
+    </section>
+  </main>
+  <footer><p>© 2026 Maya Matcha</p><p>We make every moment feel a little greener.</p></footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
