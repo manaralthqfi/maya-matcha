@@ -26,18 +26,20 @@
       <form id="booking-form" novalidate>
         <h2>Order & Booking Details</h2>
         <div class="form-grid">
-          <label>Full Name<input id="name" name="name" type="text" minlength="3" required placeholder="Example: Sarah Ahmed"></label>
-          <label>Email Address<input id="email" name="email" type="email" required placeholder="name@example.com"></label>
-          <label>Phone Number<input id="phone" name="phone" type="tel" pattern="[0-9]{10}" required placeholder="1234567890"></label>
+          <label>Full Name<input id="name" name="name" type="text" minlength="3" required placeholder="Example: Sarah Ahmed"><small class="field-error" id="name-error"></small></label>
+          <label>Email Address<input id="email" name="email" type="email" required placeholder="name@example.com"><small class="field-error" id="email-error"></small></label>
+          <label>Phone Number<input id="phone" name="phone" type="tel" pattern="[0-9]{10}" required placeholder="1234567890"><small class="field-error" id="phone-error"></small></label>
           <label>Order Type
             <select id="orderType" name="orderType" required>
               <option value="">Choose...</option><option value="drink">Drink</option>
               <option value="powder">Buy Matcha Powder</option><option value="experience">Tasting Experience</option>
             </select>
+            <small class="field-error" id="orderType-error"></small>
           </label>
-          <label>Date<input id="date" name="date" type="date" required></label>
+          <label>Date<input id="date" name="date" type="date" required><small class="field-error" id="date-error"></small></label>
           <label>Time
             <select id="time" name="time" required><option value="">Choose a time</option><option>10:00 AM</option><option>12:30 PM</option><option>4:00 PM</option><option>7:30 PM</option></select>
+            <small class="field-error" id="time-error"></small>
           </label>
         </div>
         <fieldset>
@@ -47,7 +49,7 @@
           <label class="radio"><input type="radio" name="delivery" value="Delivery"> Delivery</label>
         </fieldset>
         <label>Notes<textarea name="notes" rows="4" placeholder="Plant milk, sweetness level, or a special request..."></textarea></label>
-        <label class="checkbox"><input type="checkbox" id="terms" required> I agree to the order confirmation and pickup policy.</label>
+        <label class="checkbox"><input type="checkbox" id="terms" required> I agree to the order confirmation and pickup policy.<small class="field-error" id="terms-error"></small></label>
         <p id="form-error" class="form-message" role="alert"></p>
         <button class="button" type="submit">Confirm Order & Booking</button>
       </form>
